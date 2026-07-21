@@ -71,4 +71,5 @@ def get_logger(name: str, **binds: Any) -> BoundLogger:
     logger: BoundLogger = structlog.get_logger(name)
     if binds:
         logger = logger.bind(**binds)
+
     return logger
